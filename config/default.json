@@ -1,0 +1,4 @@
+{
+    "mongoURI": "",
+    "jwtSecret": "sina_test_shop"
+}

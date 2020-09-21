@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Sales Summary</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Product', 'Purchases'],
+                ['Skyrim', 11],
+                ['Banana', 2],
+                ['Baker Street 12"', 2],
+                ['abcdefghijklmnopqrstuvwxyz', 2]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Revenue: £450</h1>
+    <button to="localhost:3000">Back</button>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+</body>
+
+</html>
